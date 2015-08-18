@@ -281,9 +281,9 @@ class PassportPayments {
 		if( empty($params['product_quantity']) ) $params['product_quantity'] = 0;
 
 		$response = $this->requestResource(self::METHOD_POST, $uri, $params);
-		if ($response->status == self::STATUS_SUCCESS){
-			return $response->data->transactionid;
-		}
+		//if ($response->status == self::STATUS_SUCCESS){
+		//	return $response->data->transactionid;
+		//}
 		return $response;
 	}
 
@@ -375,9 +375,9 @@ class PassportPayments {
 			$uri = "/charges";
 
 		$response = $this->requestResource(self::METHOD_GET, $uri);
-		if ($response->status == self::STATUS_SUCCESS){
-			return $response->data;
-		}
+		//if ($response->status == self::STATUS_SUCCESS){
+		//	return $response->data;
+		//}
 		return $response;
 	}
 
